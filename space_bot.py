@@ -12,4 +12,7 @@ chat_id = os.getenv("CHAT_ID")
 
 images  = os.listdir("images")
 
-bot.send_message(chat_id=chat_id, text="This is our cosmo channel!")
+with open(os.path.join('images', random.choice(images)), 'rb') as photo:
+    bot.send_photo(chat_id=chat_id,
+                   photo=photo,
+                   caption='New photo in channel!')
