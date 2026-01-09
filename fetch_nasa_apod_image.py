@@ -2,7 +2,7 @@ import os
 import argparse
 import requests
 from datetime import datetime, timedelta
-from common_utils import create_folder, download_image, get_file_extension
+from general_utils import create_folder, download_image, get_file_extension
 
 
 def fetch_nasa_apod(api_key, count=1, date=None, folder="images"):
