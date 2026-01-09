@@ -16,3 +16,8 @@ with open(os.path.join('images', random.choice(images)), 'rb') as photo:
     bot.send_photo(chat_id=chat_id,
                    photo=photo,
                    caption='New photo in channel!')
+            time.sleep(delay_hours * 3600)
+    except KeyboardInterrupt:
+        break
+    except Exception:
+        time.sleep(60)
